@@ -1,0 +1,339 @@
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/curah_hujan1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+Error fetching price: Message: 
+
+Data tidak tersedia
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/suhu1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/kelembapan1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/tekanan_udara1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/curah_hujan1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+Error fetching price: Message: 
+
+Data tidak tersedia
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/suhu1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/kelembapan1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/tekanan_udara1.py", line 1, in <module>
+    import cdsapi
+ModuleNotFoundError: No module named 'cdsapi'
+2025-02-14 12:40:02,454 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-14 12:40:02,455 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2025-02-14 12:40:02,968 INFO Request ID is abe25b5e-1ede-4096-b66a-9ca9ae9bfe54
+2025-02-14 12:40:03,430 INFO status has been updated to accepted
+2025-02-14 12:40:12,211 INFO status has been updated to running
+2025-02-14 12:40:25,121 INFO status has been updated to successful
+Mengunduh data curah hujan dari Copernicus API...
+9a40858e70cc63b1a8d7f62002205ec4.grib:   0%|          | 0.00/7.14k [00:00<?, ?B/s]9a40858e70cc63b1a8d7f62002205ec4.grib: 100%|██████████| 7.14k/7.14k [00:00<00:00, 19.5kB/s]                                                                                           Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/curah_hujan2.py", line 42, in <module>
+    df = pd.read_csv(grib_filename)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x80 in position 11: invalid start byte
+Error fetching price: Message: 
+
+Data tidak tersedia
+2025-02-14 12:40:49,692 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-14 12:40:49,692 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2025-02-14 12:40:50,221 INFO Request ID is 9b52417d-3bba-475c-a557-99ca2d3c0c95
+2025-02-14 12:40:50,380 INFO status has been updated to accepted
+2025-02-14 12:41:11,960 INFO status has been updated to running
+2025-02-14 12:41:23,824 INFO status has been updated to successful
+Mengunduh data dari Copernicus API...
+f7493a72486a2965584daaec471a1fdf.grib:   0%|          | 0.00/7.14k [00:00<?, ?B/s]f7493a72486a2965584daaec471a1fdf.grib: 100%|██████████| 7.14k/7.14k [00:00<00:00, 19.4kB/s]                                                                                           /root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+Download selesai.
+Data suhu sementara disimpan ke temp_data.csv
+2025-02-14 12:41:26,636 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-14 12:41:26,636 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2025-02-14 12:41:27,135 INFO Request ID is b049cb00-7268-47b6-804e-f17f9f7d6026
+2025-02-14 12:41:27,266 INFO status has been updated to accepted
+2025-02-14 12:41:36,144 INFO status has been updated to running
+2025-02-14 12:41:49,037 INFO status has been updated to accepted
+2025-02-14 12:42:00,547 INFO status has been updated to running
+2025-02-14 12:42:17,767 INFO status has been updated to successful
+Mengunduh data dari Copernicus API...
+9b35ac0400205b0a1b9e96718a399b48.grib:   0%|          | 0.00/7.14k [00:00<?, ?B/s]9b35ac0400205b0a1b9e96718a399b48.grib: 100%|██████████| 7.14k/7.14k [00:00<00:00, 20.8kB/s]                                                                                           /root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+Data kelembapan rata-rata harian disimpan sementara di temp_data.csv
+2025-02-14 12:42:20,892 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-14 12:42:20,892 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2025-02-14 12:42:21,486 INFO Request ID is 7b47a08b-1739-4318-a6c8-52601831dd50
+2025-02-14 12:42:21,616 INFO status has been updated to accepted
+2025-02-14 12:42:30,252 INFO status has been updated to running
+2025-02-14 12:42:35,436 INFO status has been updated to successful
+Mengunduh data tekanan udara dari Copernicus API...
+c628de9cf4fc227c29488866ccc4f487.grib:   0%|          | 0.00/7.14k [00:00<?, ?B/s]c628de9cf4fc227c29488866ccc4f487.grib: 100%|██████████| 7.14k/7.14k [00:00<00:00, 19.6kB/s]                                                                                           /root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+Download selesai.
+Data tekanan udara diproses dan disimpan sementara ke temp_data.csv
+Fetching data for date: 2025-02-02
+Price on 2025-02-02: Rp. 14.150
+Fetching data for date: 2025-02-03
+Price on 2025-02-03: Rp. 14.150
+Fetching data for date: 2025-02-04
+Price on 2025-02-04: Rp. 14.150
+Fetching data for date: 2025-02-05
+Price on 2025-02-05: Rp. 14.000
+Fetching data for date: 2025-02-06
+Price on 2025-02-06: Rp. 14.150
+Fetching data for date: 2025-02-07
+Price on 2025-02-07: Rp. 14.150
+Fetching data for date: 2025-02-08
+Price on 2025-02-08: Rp. 14.150
+Fetching data for date: 2025-02-09
+Price on 2025-02-09: Rp. 14.150
+Fetching data for date: 2025-02-10
+Price on 2025-02-10: Rp. 14.150
+Fetching data for date: 2025-02-11
+Price on 2025-02-11: Rp. 14.150
+Fetching data for date: 2025-02-12
+Price on 2025-02-12: Rp. 14.000
+Fetching data for date: 2025-02-13
+Price on 2025-02-13: Rp. 14.150
+Fetching data for date: 2025-02-14
+Price on 2025-02-14: Rp. 14.150
+Fetching data for date: 2025-02-15
+Price on 2025-02-15: Rp. 14.150
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/medium4.py", line 285, in <module>
+    main()
+  File "/root/prediksi/pages/dataset/medium4.py", line 282, in main
+    crawl_data_for_bangkalan(start_date, today)
+  File "/root/prediksi/pages/dataset/medium4.py", line 271, in crawl_data_for_bangkalan
+    move_temp_to_combined()
+  File "/root/prediksi/pages/dataset/medium4.py", line 231, in move_temp_to_combined
+    float(row[2])  # t2m
+          ~~~^^^
+IndexError: list index out of range
+2025-02-15 12:41:38,207 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-15 12:41:38,207 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+/root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+File precipitation.grib sudah ada, menggunakan file yang ada.
+Data curah hujan rata-rata harian disimpan sementara di temp_data.csv
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/curah_hujan3.py", line 60, in <module>
+    df_temp = pd.read_csv(temp_csv)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 2 fields in line 26, saw 3
+
+2025-02-15 12:41:40,006 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-15 12:41:40,006 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+/root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+File temperature_data.grib sudah ada, menggunakan file yang ada.
+Data suhu sementara disimpan ke temp_data.csv
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/suhu2.py", line 86, in <module>
+    fetch_temperature_data("2025-02-02", datetime.today().strftime("%Y-%m-%d"))
+  File "/root/prediksi/pages/dataset/suhu2.py", line 68, in fetch_temperature_data
+    temp_data = pd.read_csv(temp_csv)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 2 fields in line 26, saw 3
+
+2025-02-15 12:41:41,711 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-15 12:41:41,711 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+/root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+File humidity_data.grib sudah ada, menggunakan file yang ada.
+Data kelembapan rata-rata harian disimpan sementara di temp_data.csv
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/kelembapan2.py", line 60, in <module>
+    df_temp = pd.read_csv(temp_csv)
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 2 fields in line 26, saw 3
+
+2025-02-15 12:41:43,462 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-15 12:41:43,462 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+/root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+File pressure_data.grib sudah ada, menggunakan file yang ada.
+Traceback (most recent call last):
+  File "/root/prediksi/pages/dataset/tekanan_udara2.py", line 69, in <module>
+    temp_df = pd.read_csv(temp_filename)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/prediksi/venv/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 2 fields in line 26, saw 3
+
+Fetching data for date: 2025-02-02
+Price on 2025-02-02: Rp. 14.150
+Data untuk 2025-02-02 disimpan.
+Fetching data for date: 2025-02-03
+Price on 2025-02-03: Rp. 14.150
+Data untuk 2025-02-03 disimpan.
+Fetching data for date: 2025-02-04
+Price on 2025-02-04: Rp. 14.150
+Data untuk 2025-02-04 disimpan.
+Fetching data for date: 2025-02-05
+Price on 2025-02-05: Rp. 14.000
+Data untuk 2025-02-05 disimpan.
+Fetching data for date: 2025-02-06
+Price on 2025-02-06: Rp. 14.150
+Data untuk 2025-02-06 disimpan.
+Fetching data for date: 2025-02-07
+Price on 2025-02-07: Rp. 14.150
+Data untuk 2025-02-07 disimpan.
+Fetching data for date: 2025-02-08
+Price on 2025-02-08: Rp. 14.150
+Data untuk 2025-02-08 disimpan.
+Fetching data for date: 2025-02-09
+Price on 2025-02-09: Rp. 14.150
+Data untuk 2025-02-09 disimpan.
+Fetching data for date: 2025-02-10
+Price on 2025-02-10: Rp. 14.150
+Data untuk 2025-02-10 disimpan.
+Fetching data for date: 2025-02-11
+Price on 2025-02-11: Rp. 14.150
+Data untuk 2025-02-11 disimpan.
+Fetching data for date: 2025-02-12
+Price on 2025-02-12: Rp. 14.000
+Data untuk 2025-02-12 disimpan.
+Fetching data for date: 2025-02-13
+Price on 2025-02-13: Rp. 14.150
+Data untuk 2025-02-13 disimpan.
+Fetching data for date: 2025-02-14
+Price on 2025-02-14: Rp. 14.150
+Data untuk 2025-02-14 disimpan.
+Fetching data for date: 2025-02-15
+Price on 2025-02-15: Rp. 14.150
+Data untuk 2025-02-15 disimpan.
+Fetching data for date: 2025-02-16
+Price on 2025-02-16: Rp. 14.150
+Data untuk 2025-02-16 disimpan.
+2025-02-16 09:01:42,466 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-16 09:01:42,466 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+2025-02-16 09:01:43,147 INFO Request ID is 4ae6d13e-aa82-4bfd-b65d-97387fc7e5ae
+2025-02-16 09:01:43,290 INFO status has been updated to accepted
+2025-02-16 09:01:51,986 INFO status has been updated to running
+2025-02-16 09:04:36,090 INFO status has been updated to successful
+Mengunduh data curah hujan dari Copernicus API...
+aab77ad92a3cdfecfb478d8d379f284a.grib:   0%|          | 0.00/8.98k [00:00<?, ?B/s]aab77ad92a3cdfecfb478d8d379f284a.grib: 100%|██████████| 8.98k/8.98k [00:00<00:00, 25.6kB/s]                                                                                           /root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+Download selesai.
+File temp_data_precipitation.csv tidak ditemukan, membuat file baru dan menyimpan data.
+2025-02-16 09:04:39,468 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-16 09:04:39,469 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+/root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+File temperature_data.grib sudah ada, menggunakan file yang ada.
+Data suhu baru disimpan ke temp_data_suhu.csv
+2025-02-16 09:04:41,310 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-16 09:04:41,310 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+/root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+File humidity_data.grib sudah ada, menggunakan file yang ada.
+File temp_data_humidity.csv tidak ditemukan, membuat file baru dan menyimpan data.
+2025-02-16 09:04:43,010 INFO [2024-09-26T00:00:00] Watch our [Forum](https://forum.ecmwf.int/) for Announcements, news and other discussed topics.
+2025-02-16 09:04:43,010 WARNING [2024-06-16T00:00:00] CDS API syntax is changed and some keys or parameter names may have also changed. To avoid requests failing, please use the "Show API request code" tool on the dataset Download Form to check you are using the correct syntax for your API request.
+/root/prediksi/venv/lib/python3.12/site-packages/cfgrib/xarray_plugin.py:131: FutureWarning: In a future version of xarray decode_timedelta will default to False rather than None. To silence this warning, set decode_timedelta to True, False, or a 'CFTimedeltaCoder' instance.
+  vars, attrs, coord_names = xr.conventions.decode_cf_variables(
+File pressure_data.grib sudah ada, menggunakan file yang ada.
+File temp_data_pressure.csv tidak ditemukan, membuat file baru dan menyimpan data.
+Tidak ada data baru untuk ditambahkan.

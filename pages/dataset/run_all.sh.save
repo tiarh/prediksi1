@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Aktifkan Virtual Environment
+source /root/prediksi/venv/bin/activate
+
+# Jalankan script Python
+python3 /root/prediksi/pages/dataset/curah_hujan2.py
+python3 /root/prediksi/pages/dataset/medium2.py
+python3 /root/prediksi/pages/dataset/suhu2.py
+python3 /root/prediksi/pages/dataset/kelembapan2.py
+python3 /root/prediksi/pages/dataset/tekanan_udara2.py
+# Nonaktifkan Virtual Environment
+deactivate

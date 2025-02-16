@@ -1,0 +1,64 @@
+import pandas as pd
+import numpy as np
+import os
+
+# Load data yang baru dicrawl
+df_beras = pd.read_csv('/root/prediksi/pages/dataset/temp_data1.csv')
+df_suhu = pd.read_csv('/root/prediksi/pages/dataset/temp_data_suhu.csv')
+df_hujan = pd.read_csv('/root/prediksi/pages/dataset/temp_data_precipitation.csv')
+df_udara = pd.read_csv('/root/prediksi/pages/dataset/temp_data_pressure.csv')
+df_kelembapan = pd.read_csv('/root/prediksi/pages/dataset/temp_data_humidity.csv')
+
+# Bersihkan data harga beras
+df_beras['Price'] = df_beras['Price'].replace({'Rp. ': '', ',': ''}, regex=True).astype(float)
+
+# Pastikan format kolom tanggal sama
+df_beras['Date'] = pd.to_datetime(df_beras['Date'], dayfirst=True)
+df_suhu['date'] = pd.to_datetime(df_suhu['date'], dayfirst=True)
+df_hujan['date'] = pd.to_datetime(df_hujan['date'], dayfirst=True)
+df_udara['date'] = pd.to_datetime(df_udara['date'], dayfirst=True)
+df_kelembapan['date'] = pd.to_datetime(df_kelembapan['date'], dayfirst=True)
+
+# Cari tanggal minimal yang tersedia di semua dataset
+tanggal_terakhir = min(
+    df_beras['Date'].max(),
+    df_suhu['date'].max(),
+    df_hujan['date'].max(),
+    df_udara['date'].max(),
+    df_kelembapan['date'].max()
+)
+
+# Filter data sampai tanggal minimal
+df_beras = df_beras[df_beras['Date'] <= tanggal_terakhir]
+df_suhu = df_suhu[df_suhu['date'] <= tanggal_terakhir]
+df_hujan = df_hujan[df_hujan['date'] <= tanggal_terakhir]
+df_udara = df_udara[df_udara['date'] <= tanggal_terakhir]
+df_kelembapan = df_kelembapan[df_kelembapan['date'] <= tanggal_terakhir]
+
+# Gabungkan data baru
+df_new_combined = pd.merge(df_beras, df_suhu[['date', 't2m']], left_on='Date', right_on='date', how='left')
+df_new_combined = pd.merge(df_new_combined, df_kelembapan[['date', 'mean_dewpoint_temperature']], on='date', how='left')
+df_new_combined = pd.merge(df_new_combined, df_hujan[['date', 'tp']], on='date', how='left')
+df_new_combined = pd.merge(df_new_combined, df_udara[['date', 'mean_surface_pressure_hPa']], on='date', how='left')
+
+# Hapus kolom 'date' yang duplikat
+df_new_combined = df_new_combined.drop(columns=['date'])
+
+# Cek apakah file combined_data.csv sudah ada
+combined_file = '/prediksi/pages/dataset/combined_data.csv'
+if os.path.exists(combined_file):
+    # Load file combined lama
+    df_old_combined = pd.read_csv(combined_file)
+    
+    # Pastikan format Date di df_old_combined sesuai
+    df_old_combined['Date'] = pd.to_datetime(df_old_combined['Date'], dayfirst=True)
+
+    # Gabungkan data lama dan baru, lalu drop duplikat berdasarkan tanggal
+    df_final = pd.concat([df_old_combined, df_new_combined]).drop_duplicates(subset=['Date']).sort_values(by='Date')
+else:
+    df_final = df_new_combined
+
+# Simpan hasil akhir ke combined_data.csv
+df_final.to_csv(combined_file, index=False)
+
+print(f"Data berhasil diperbarui hingga tanggal {tanggal_terakhir}!")
