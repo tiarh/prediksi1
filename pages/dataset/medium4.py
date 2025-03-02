@@ -32,7 +32,7 @@ def get_driver():
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--user-data-dir=/tmp/chrome-user-data")
-    chrome_options.binary_location = "/usr/local/bin/google-chrome"
+    chrome_options.binary_location = "/usr/bin/google-chrome"
     service = Service("/usr/local/bin/chromedriver")
     return webdriver.Chrome(service=service, options=chrome_options)
 

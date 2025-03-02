@@ -22,21 +22,21 @@ st.subheader("📊 Data Saat Ini (Termasuk Input Terbaru)")
 st.dataframe(data)
 
 # Check if data is sufficient for prediction (90 timesteps)
-if len(data) < 90:
+if len(data) < 84:
     st.warning("⚠️ Data tidak cukup untuk prediksi (dibutuhkan minimal 90 hari).")
 else:
     # Prepare input for prediction
-    recent_data = data.iloc[-90:][["Price", "t2m", "mean_dewpoint_temperature", "tp", "mean_surface_pressure_hPa"]]
+    recent_data = data.iloc[-84:][["Price", "t2m", "mean_dewpoint_temperature", "tp", "mean_surface_pressure_hPa"]]
 
     # Normalisasi data
     scaler = MinMaxScaler()
     normalized_data = scaler.fit_transform(recent_data)  # Normalisasi data 90 hari terakhir
 
     # Reshape untuk input model
-    input_data = normalized_data.reshape(1, 90 * 5)  # Reshape menjadi (1, 450)
+    input_data = normalized_data.reshape(1, 84 * 5)  # Reshape menjadi (1, 450)
 
     # Load the model
-    url = 'https://github.com/tiarh/prediksi-beras/raw/refs/heads/baru/model-skenario3%20(2).h5'
+    url = 'https://github.com/tiarh/prediksi1/raw/refs/heads/main/data/model-skenario3.h5'
     response = requests.get(url)
     with open('model-skenario3.h5', 'wb') as f:
         f.write(response.content)
@@ -55,7 +55,7 @@ else:
     st.write(f"Predicted values: {predicted}")
 
     # Generate dates for the next 7 days
-    future_dates = pd.date_range(start=pd.to_datetime(data["Date"].iloc[-1]), periods=8, freq="D")[1:]
+    future_dates = pd.date_range(start=pd.to_datetime(data["Date"].iloc[-1]) + pd.Timedelta(days=7), periods=7, freq="D")
 
     # Create DataFrame for predicted data
     predicted_df = pd.DataFrame({
